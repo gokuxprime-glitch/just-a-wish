@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Roshni 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(135deg,#ff9acb,#ffc6df,#ffdff0);
+}
+
+body::before{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:#fff;
+filter:blur(130px);
+top:-80px;
+left:-80px;
+opacity:.5;
+}
+
+.card{
+position:relative;
+width:90%;
+max-width:420px;
+padding:30px;
+border-radius:30px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(18px);
+border:2px solid rgba(255,255,255,.5);
+box-shadow:0 15px 40px rgba(255,105,180,.3);
+text-align:center;
+z-index:2;
+animation:pop 1s ease;
+}
+
+@keyframes pop{
+0%{transform:scale(.7);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+h1{
+font-family:'Pacifico',cursive;
+font-size:40px;
+color:#ff2f8b;
+margin-bottom:12px;
+}
+
+h2{
+font-size:28px;
+color:#fff;
+margin-bottom:18px;
+text-shadow:0 0 12px #ff4da6;
+}
+
+p{
+color:#fff;
+font-size:15px;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+button{
+padding:14px 35px;
+border:none;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+background:linear-gradient(45deg,#ff4da6,#ff79c6);
+color:white;
+box-shadow:0 8px 20px rgba(255,20,147,.4);
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px hotpink;
+}
+
+button:active{
+transform:scale(.95);
+}
+
+.heart{
+position:absolute;
+font-size:22px;
+animation:float linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(.5);
+}
+100%{
+transform:translateY(-120px) scale(1.3);
+}
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<h2>🌸 Happy Birthday, Roshni! 🌸</h2>
+
+<p>
+Dear <b>Roshni</b> 💖,<br><br>
+
+Wishing you a birthday filled with endless happiness, love, laughter, and unforgettable memories. May every dream you have come true, every step you take bring success, and every day of your life be as beautiful as your smile.
+
+Keep shining, keep smiling, and always believe in yourself because you are truly special. May this new year of your life bring countless blessings, good health, peace, and joy.
+
+✨ Have an amazing birthday and a wonderful year ahead! ✨
+
+🎂🎉🎁💐💕
+</p>
+
+<button onclick="celebrate()">🎉 Celebrate</button>
+
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script>
+// Floating Hearts
+for(let i=0;i<45;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML=["💖","💕","💗","🌸","💞"][Math.floor(Math.random()*5)];
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(5+Math.random()*6)+"s";
+h.style.animationDelay=Math.random()*5+"s";
+h.style.fontSize=(18+Math.random()*22)+"px";
+document.body.appendChild(h);
+}
+
+// Confetti
+const canvas=document.getElementById("canvas");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+}
+resize();
+window.onresize=resize;
+
+let confetti=[];
+
+function celebrate(){
+
+for(let i=0;i<220;i++){
+confetti.push({
+x:Math.random()*canvas.width,
+y:-20,
+r:Math.random()*6+3,
+d:Math.random()*5+2,
+color:["#ff1493","#ff69b4","#ffffff","#ffd1e8","#ff8ac8"][Math.floor(Math.random()*5)]
+});
+}
+
+if(navigator.vibrate){
+navigator.vibrate([120,60,120]);
+}
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+confetti.forEach((c,index)=>{
+
+ctx.beginPath();
+ctx.fillStyle=c.color;
+ctx.arc(c.x,c.y,c.r,0,Math.PI*2);
+ctx.fill();
+
+c.y+=c.d;
+c.x+=Math.sin(c.y*0.02);
+
+if(c.y>canvas.height+20){
+confetti.splice(index,1);
+}
+
+});
+
+requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
