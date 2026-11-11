@@ -1,223 +1,1225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Roshni 💖</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Hey Cutiepie - I'm Sorry ❤️</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Tone.js for gentle cute sound effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-cursive: 'Dancing Script', cursive;
+      --font-body: 'Quicksand', sans-serif;
+    }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
 
-body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-background:linear-gradient(135deg,#ff9acb,#ffc6df,#ffdff0);
-}
+    body {
+      font-family: var(--font-body);
+      margin: 0;
+      padding: 0;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      background: radial-gradient(circle at 18% 18%, #fdf6e9 0%, #f9eef2 42%, #f4ebf7 80%, #fdf8f2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
 
-body::before{
-content:"";
-position:absolute;
-width:300px;
-height:300px;
-background:#fff;
-filter:blur(130px);
-top:-80px;
-left:-80px;
-opacity:.5;
-}
+    .font-cursive {
+      font-family: var(--font-cursive);
+    }
 
-.card{
-position:relative;
-width:90%;
-max-width:420px;
-padding:30px;
-border-radius:30px;
-background:rgba(255,255,255,.18);
-backdrop-filter:blur(18px);
-border:2px solid rgba(255,255,255,.5);
-box-shadow:0 15px 40px rgba(255,105,180,.3);
-text-align:center;
-z-index:2;
-animation:pop 1s ease;
-}
+    /* Ultra-Puffy 3D Claymorphism Outer Card */
+    .clay-card {
+      background: linear-gradient(145deg, #fffdfa, #f5efeb);
+      border-radius: 44px;
+      box-shadow: 
+        0 28px 54px rgba(105, 80, 90, 0.18),
+        0 8px 18px rgba(105, 80, 90, 0.1),
+        inset 0 8px 12px rgba(255, 255, 255, 0.98),
+        inset 0 -10px 16px rgba(212, 198, 190, 0.65),
+        inset 8px 0 12px rgba(255, 255, 255, 0.75),
+        inset -8px 0 12px rgba(218, 205, 198, 0.45);
+      border: 2.5px solid rgba(255, 255, 255, 0.85);
+      position: relative;
+      transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
 
-@keyframes pop{
-0%{transform:scale(.7);opacity:0;}
-100%{transform:scale(1);opacity:1;}
-}
+    /* Deep Recessed 3D Inner Frame / Window */
+    .clay-window-frame {
+      background: linear-gradient(145deg, #f3edea, #fdfbfa);
+      border-radius: 32px;
+      padding: 13px;
+      box-shadow:
+        0 10px 22px rgba(140, 115, 120, 0.1),
+        inset 0 5px 8px rgba(255, 255, 255, 0.95),
+        inset 0 -6px 10px rgba(205, 190, 185, 0.55);
+    }
 
-h1{
-font-family:'Pacifico',cursive;
-font-size:40px;
-color:#ff2f8b;
-margin-bottom:12px;
-}
+    /* Recessed Pastel Stages inside the frame */
+    .clay-stage-pink {
+      background: linear-gradient(180deg, #fce2e6 0%, #f7cbd3 100%);
+      border-radius: 23px;
+      box-shadow: 
+        inset 0 8px 16px rgba(195, 130, 142, 0.42),
+        inset 0 -5px 10px rgba(255, 245, 247, 0.85);
+      position: relative;
+      overflow: hidden;
+    }
 
-h2{
-font-size:28px;
-color:#fff;
-margin-bottom:18px;
-text-shadow:0 0 12px #ff4da6;
-}
+    .clay-stage-purple {
+      background: linear-gradient(180deg, #e7def8 0%, #d8c8f2 100%);
+      border-radius: 23px;
+      box-shadow: 
+        inset 0 8px 16px rgba(145, 128, 185, 0.42),
+        inset 0 -5px 10px rgba(250, 245, 255, 0.85);
+      position: relative;
+      overflow: hidden;
+    }
 
-p{
-color:#fff;
-font-size:15px;
-line-height:1.8;
-margin-bottom:25px;
-}
+    .clay-stage-peach {
+      background: linear-gradient(180deg, #fde8d7 0%, #f7d2b5 100%);
+      border-radius: 23px;
+      box-shadow: 
+        inset 0 8px 16px rgba(190, 140, 110, 0.42),
+        inset 0 -5px 10px rgba(255, 248, 242, 0.85);
+      position: relative;
+      overflow: hidden;
+    }
 
-button{
-padding:14px 35px;
-border:none;
-border-radius:50px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-background:linear-gradient(45deg,#ff4da6,#ff79c6);
-color:white;
-box-shadow:0 8px 20px rgba(255,20,147,.4);
-transition:.3s;
-}
+    /* 3D Glossy Pill Buttons */
+    .clay-btn-pink {
+      background: linear-gradient(180deg, #f7bfd0 0%, #ea93aa 100%);
+      border-radius: 9999px;
+      color: #542631;
+      box-shadow: 
+        0 12px 22px rgba(212, 120, 142, 0.4),
+        0 4px 8px rgba(175, 90, 110, 0.25),
+        inset 0 5px 8px rgba(255, 248, 250, 0.9),
+        inset 0 -6px 10px rgba(195, 108, 128, 0.65);
+      border: 1.5px solid rgba(255, 240, 245, 0.75);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, opacity 0.3s ease;
+    }
 
-button:hover{
-transform:scale(1.08);
-box-shadow:0 0 25px hotpink;
-}
+    .clay-btn-pink:active:not(:disabled) {
+      transform: scale(0.95) translateY(2px);
+      box-shadow: 
+        0 4px 10px rgba(216, 135, 153, 0.25),
+        inset 0 3px 6px rgba(190, 110, 130, 0.4);
+    }
 
-button:active{
-transform:scale(.95);
-}
+    .clay-btn-pink:disabled {
+      opacity: 0.55;
+      filter: grayscale(25%);
+      cursor: not-allowed;
+    }
 
-.heart{
-position:absolute;
-font-size:22px;
-animation:float linear infinite;
-opacity:.8;
-}
+    .clay-btn-purple {
+      background: linear-gradient(180deg, #dbcbf8 0%, #c4a9f3 100%);
+      border-radius: 9999px;
+      color: #433260;
+      box-shadow: 
+        0 12px 22px rgba(165, 140, 215, 0.4),
+        0 4px 8px rgba(130, 105, 180, 0.22),
+        inset 0 5px 8px rgba(250, 245, 255, 0.9),
+        inset 0 -6px 10px rgba(158, 130, 212, 0.65);
+      border: 1.5px solid rgba(250, 242, 255, 0.75);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+    }
 
-@keyframes float{
-0%{
-transform:translateY(100vh) scale(.5);
-}
-100%{
-transform:translateY(-120px) scale(1.3);
-}
-}
+    .clay-btn-purple:active {
+      transform: scale(0.95) translateY(2px);
+    }
 
-canvas{
-position:fixed;
-top:0;
-left:0;
-pointer-events:none;
-}
-</style>
+    .clay-btn-gray {
+      background: linear-gradient(180deg, #efe9eb 0%, #dfd6d9 100%);
+      border-radius: 9999px;
+      color: #6b5a60;
+      box-shadow: 
+        0 6px 14px rgba(140, 120, 125, 0.22),
+        inset 0 3px 5px rgba(255, 255, 255, 0.85),
+        inset 0 -4px 6px rgba(185, 170, 175, 0.55);
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Screen 3 Tap-to-Reveal Bars */
+    .reveal-track {
+      position: relative;
+      height: 82px;
+      border-radius: 26px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 
+        inset 0 4px 10px rgba(160, 140, 145, 0.22),
+        inset 0 -3px 6px rgba(255, 255, 255, 0.9),
+        0 4px 10px rgba(140, 115, 120, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .reveal-track:active {
+      transform: scale(0.985);
+    }
+
+    .reveal-track-peach {
+      background: linear-gradient(180deg, #fdf3ec 0%, #faece1 100%);
+      border: 1.5px solid rgba(255, 235, 220, 0.8);
+    }
+    .reveal-track-pink {
+      background: linear-gradient(180deg, #fdf0f4 0%, #fae6ec 100%);
+      border: 1.5px solid rgba(255, 228, 236, 0.8);
+    }
+    .reveal-track-purple {
+      background: linear-gradient(180deg, #f5f0fd 0%, #eee6fa 100%);
+      border: 1.5px solid rgba(238, 228, 255, 0.8);
+    }
+
+    /* Puffy 3D Cover that slides left when tapped */
+    .reveal-cover {
+      position: absolute;
+      inset: 0;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.55s ease;
+    }
+
+    .reveal-track.opened .reveal-cover {
+      transform: translateX(-104%);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .cover-peach {
+      background: linear-gradient(180deg, #fbdac3 0%, #f7c7a6 100%);
+      box-shadow: 
+        inset 0 5px 8px rgba(255, 248, 242, 0.85),
+        inset 0 -6px 10px rgba(219, 158, 118, 0.55),
+        0 6px 14px rgba(219, 158, 118, 0.25);
+    }
+
+    .cover-pink {
+      background: linear-gradient(180deg, #f9cbd9 0%, #f4b6c9 100%);
+      box-shadow: 
+        inset 0 5px 8px rgba(255, 245, 249, 0.85),
+        inset 0 -6px 10px rgba(214, 138, 162, 0.55),
+        0 6px 14px rgba(214, 138, 162, 0.25);
+    }
+
+    .cover-purple {
+      background: linear-gradient(180deg, #decdf8 0%, #ceb8f4 100%);
+      box-shadow: 
+        inset 0 5px 8px rgba(250, 245, 255, 0.85),
+        inset 0 -6px 10px rgba(162, 136, 212, 0.55),
+        0 6px 14px rgba(162, 136, 212, 0.25);
+    }
+
+    /* Screen transitions */
+    .screen-view {
+      display: none;
+      opacity: 0;
+      transform: scale(0.95) translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .screen-view.active {
+      display: block;
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* Soft 3D SVG Drop Shadow for clay characters */
+    .clay-svg-shadow {
+      filter: drop-shadow(0 8px 10px rgba(135, 80, 95, 0.22));
+    }
+
+    /* Animations for Cute Characters */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(3deg); }
+    }
+
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(-4deg); }
+    }
+
+    @keyframes bunnyBreath {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-3px) scale(1.02, 0.98); }
+    }
+
+    @keyframes happyDance {
+      0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+      25% { transform: translateY(-10px) rotate(-6deg) scale(1.05); }
+      50% { transform: translateY(0) rotate(0deg) scale(1); }
+      75% { transform: translateY(-10px) rotate(6deg) scale(1.05); }
+    }
+
+    @keyframes earWiggle {
+      0%, 100% { transform: rotate(0deg); }
+      30% { transform: rotate(-5deg); }
+      60% { transform: rotate(3deg); }
+    }
+
+    @keyframes pawWave {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-18deg) translateY(-2px); }
+    }
+
+    @keyframes heartPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.14); }
+    }
+
+    @keyframes shakeHint {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(-20px) rotate(0deg) scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(105vh) rotate(540deg) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    .anim-float { animation: floatSlow 3.2s ease-in-out infinite; }
+    .anim-float-rev { animation: floatReverse 3.6s ease-in-out infinite; }
+    .anim-breath { animation: bunnyBreath 2.6s ease-in-out infinite; transform-origin: bottom center; }
+    .anim-dance { animation: happyDance 0.9s ease-in-out infinite; transform-origin: bottom center; }
+    .anim-ear { animation: earWiggle 3s ease-in-out infinite; transform-origin: bottom center; }
+    .anim-paw { animation: pawWave 1.4s ease-in-out infinite; transform-origin: bottom center; }
+    .anim-heart { animation: heartPulse 1.8s ease-in-out infinite; transform-origin: center; }
+    .anim-shake { animation: shakeHint 0.35s ease-in-out; }
+
+    /* Screen 4 Letter Expand Transition */
+    .letter-drawer {
+      transition: all 0.65s cubic-bezier(0.25, 1, 0.35, 1);
+    }
+
+    /* Custom Scrollbar for the Apology Letter */
+    .letter-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+    .letter-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .letter-scroll::-webkit-scrollbar-thumb {
+      background: rgba(214, 148, 165, 0.35);
+      border-radius: 9999px;
+    }
+  </style>
 </head>
+<body class="p-4 sm:p-6 select-none">
 
-<body>
+  <!-- Shared SVG Gradients for 3D Puffy Clay Shading on Characters -->
+  <svg width="0" height="0" class="absolute pointer-events-none">
+    <defs>
+      <radialGradient id="clayWhite3D" cx="35%" cy="28%" r="70%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="68%" stop-color="#fdf7f8" />
+        <stop offset="100%" stop-color="#eddce0" />
+      </radialGradient>
+      <radialGradient id="clayHeartPink3D" cx="32%" cy="28%" r="70%">
+        <stop offset="0%" stop-color="#ffbfd0" />
+        <stop offset="55%" stop-color="#f48ca4" />
+        <stop offset="100%" stop-color="#d66580" />
+      </radialGradient>
+      <radialGradient id="clayHeartRed3D" cx="32%" cy="28%" r="70%">
+        <stop offset="0%" stop-color="#ff8fa0" />
+        <stop offset="55%" stop-color="#e63950" />
+        <stop offset="100%" stop-color="#b51d32" />
+      </radialGradient>
+    </defs>
+  </svg>
 
-<div class="card">
+  <!-- Confetti Container for Screen 5 Celebration -->
+  <div id="confettiContainer" class="fixed inset-0 pointer-events-none overflow-hidden z-50"></div>
 
-<h1>🎂 Happy Birthday 🎂</h1>
+  <!-- Background Soft Blurred Pastel Hearts -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <svg class="absolute top-6 left-4 w-28 h-28 opacity-35 blur-[2px] anim-float" viewBox="0 0 100 100" fill="none">
+      <path d="M50 82 C50 82 14 58 14 34 C14 20 25 12 37 12 C44 12 48 16 50 21 C52 16 56 12 63 12 C75 12 86 20 86 34 C86 58 50 82 50 82 Z" stroke="#f28b9c" stroke-width="6" fill="#fad2d9" transform="rotate(-14 50 50)"/>
+    </svg>
+    <svg class="absolute top-8 right-6 w-24 h-24 opacity-40 blur-[3px] anim-float-rev" viewBox="0 0 100 100">
+      <path d="M50 82 C50 82 14 58 14 34 C14 20 25 12 37 12 C44 12 48 16 50 21 C52 16 56 12 63 12 C75 12 86 20 86 34 C86 58 50 82 50 82 Z" fill="#d9c6f8" transform="rotate(15 50 50)"/>
+    </svg>
+    <div class="absolute bottom-12 left-6 w-40 h-40 rounded-full bg-amber-100/60 blur-2xl"></div>
+    <svg class="absolute bottom-10 right-8 w-28 h-28 opacity-35 blur-[2px] anim-float" viewBox="0 0 100 100">
+      <path d="M50 82 C50 82 14 58 14 34 C14 20 25 12 37 12 C44 12 48 16 50 21 C52 16 56 12 63 12 C75 12 86 20 86 34 C86 58 50 82 50 82 Z" fill="#f7c6d4" transform="rotate(-12 50 50)"/>
+    </svg>
+  </div>
 
-<h2>🌸 Happy Birthday, Roshni! 🌸</h2>
+  <!-- Top-right subtle tool: Sound toggle only (Customize button removed) -->
+  <div class="fixed top-3 right-3 z-40 flex items-center gap-2">
+    <button id="soundToggleBtn" onclick="toggleSound()" class="bg-white/75 backdrop-blur-md text-[#6b4852] px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm border border-white/80 flex items-center gap-1.5 hover:bg-white transition">
+      <span id="soundIcon">🔊</span> <span class="hidden sm:inline">Sound</span>
+    </button>
+  </div>
 
-<p>
-Dear <b>Roshni</b> 💖,<br><br>
+  <!-- MAIN WRAPPER -->
+  <main class="relative z-10 w-full max-w-[375px] mx-auto my-auto">
 
-Wishing you a birthday filled with endless happiness, love, laughter, and unforgettable memories. May every dream you have come true, every step you take bring success, and every day of your life be as beautiful as your smile.
+    <!-- ==========================================
+         SCREEN 1: "Hey Cutiepie"
+         ========================================== -->
+    <section id="screen-1" class="screen-view active">
+      <div class="clay-card p-6 sm:p-7 text-center">
+        
+        <!-- 3D Inset Window with Bunny -->
+        <div class="clay-window-frame mb-6">
+          <div class="clay-stage-pink h-48 flex items-center justify-center relative">
+            
+            <!-- Left Floating 3D Pink Heart -->
+            <svg class="w-9 h-9 absolute top-5 left-7 anim-float clay-svg-shadow" viewBox="0 0 60 60">
+              <path d="M30 50 C30 50 8 36 8 20 C8 11 15 6 22 6 C26 6 29 9 30 12 C31 9 34 6 38 6 C45 6 52 11 52 20 C52 36 30 50 30 50 Z" fill="url(#clayHeartPink3D)" />
+            </svg>
 
-Keep shining, keep smiling, and always believe in yourself because you are truly special. May this new year of your life bring countless blessings, good health, peace, and joy.
+            <!-- Right Floating 3D Pink Heart -->
+            <svg class="w-8 h-8 absolute top-6 right-7 anim-float-rev clay-svg-shadow" viewBox="0 0 60 60">
+              <path d="M30 50 C30 50 8 36 8 20 C8 11 15 6 22 6 C26 6 29 9 30 12 C31 9 34 6 38 6 C45 6 52 11 52 20 C52 36 30 50 30 50 Z" fill="url(#clayHeartPink3D)" />
+            </svg>
 
-✨ Have an amazing birthday and a wonderful year ahead! ✨
+            <!-- Bottom Left Sakura Blossom -->
+            <svg class="w-9 h-9 absolute bottom-3 left-4 opacity-95 clay-svg-shadow" viewBox="0 0 60 60">
+              <g transform="translate(30,30)">
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(72)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(144)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(216)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(288)" />
+                <circle cx="0" cy="0" r="4.5" fill="#fff0f3" />
+              </g>
+            </svg>
 
-🎂🎉🎁💐💕
-</p>
+            <!-- Bottom Right Sakura Blossom -->
+            <svg class="w-9 h-9 absolute bottom-3 right-4 opacity-95 clay-svg-shadow" viewBox="0 0 60 60">
+              <g transform="translate(30,30)">
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(72)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(144)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(216)" />
+                <ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#clayHeartPink3D)" transform="rotate(288)" />
+                <circle cx="0" cy="0" r="4.5" fill="#fff0f3" />
+              </g>
+            </svg>
 
-<button onclick="celebrate()">🎉 Celebrate</button>
+            <!-- Cute 3D Clay Kawaii White Bunny SVG -->
+            <svg class="w-32 h-32 mt-5 anim-breath clay-svg-shadow" viewBox="0 0 140 140">
+              <ellipse cx="70" cy="126" rx="34" ry="6" fill="rgba(180, 110, 125, 0.25)" />
+              <!-- Left Floppy Ear -->
+              <g class="anim-ear">
+                <path d="M54 52 C42 22 25 26 26 42 C26 52 38 56 48 58 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M48 50 C40 32 31 34 31 42 C31 47 38 50 45 52 Z" fill="#f9bbc6"/>
+              </g>
+              <!-- Right Ear -->
+              <g class="anim-ear">
+                <path d="M80 50 C82 18 102 18 98 48 C96 56 88 56 82 54 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M84 46 C85 26 95 26 93 45 Z" fill="#f9bbc6"/>
+              </g>
+              <!-- Body -->
+              <path d="M46 95 C42 112 48 124 70 124 C92 124 98 112 94 95 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3" stroke-linejoin="round"/>
+              <!-- Head / Cheeks -->
+              <path d="M36 78 C32 52 50 44 70 44 C90 44 108 52 104 78 C108 92 95 104 70 104 C45 104 32 92 36 78 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3" stroke-linejoin="round"/>
+              <!-- Rosy Blushing Cheeks -->
+              <ellipse cx="47" cy="84" rx="7.5" ry="4.8" fill="#f794a4" opacity="0.8"/>
+              <ellipse cx="93" cy="84" rx="7.5" ry="4.8" fill="#f794a4" opacity="0.8"/>
+              <!-- Glossy Eyes -->
+              <circle cx="55" cy="77" r="3.8" fill="#5a3e36"/>
+              <circle cx="53.8" cy="75.8" r="1.3" fill="#ffffff"/>
+              <circle cx="85" cy="77" r="3.8" fill="#5a3e36"/>
+              <circle cx="83.8" cy="75.8" r="1.3" fill="#ffffff"/>
+              <!-- Little Shy Eyebrows -->
+              <path d="M50 69 Q55 66 59 69" fill="none" stroke="#6d4c41" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M81 69 Q85 66 90 69" fill="none" stroke="#6d4c41" stroke-width="2.2" stroke-linecap="round"/>
+              <!-- Cute Pouty Mouth -->
+              <path d="M66 83 Q70 80 74 83" fill="none" stroke="#6d4c41" stroke-width="2.4" stroke-linecap="round"/>
+              <!-- Little Paws -->
+              <ellipse cx="56" cy="103" rx="7" ry="5" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="2.8"/>
+              <ellipse cx="84" cy="103" rx="7" ry="5" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="2.8"/>
+              <!-- Feet -->
+              <ellipse cx="52" cy="122" rx="8" ry="4.5" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="2.8"/>
+              <ellipse cx="88" cy="122" rx="8" ry="4.5" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="2.8"/>
+            </svg>
 
-</div>
+          </div>
+        </div>
 
-<canvas id="canvas"></canvas>
+        <!-- Cursive Heading -->
+        <h1 id="s1Heading" class="font-cursive text-[40px] leading-tight text-[#6d2e3b] mb-2">
+          Hey Mam
+        </h1>
 
-<script>
-// Floating Hearts
-for(let i=0;i<45;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML=["💖","💕","💗","🌸","💞"][Math.floor(Math.random()*5)];
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=(5+Math.random()*6)+"s";
-h.style.animationDelay=Math.random()*5+"s";
-h.style.fontSize=(18+Math.random()*22)+"px";
-document.body.appendChild(h);
-}
+        <!-- Subtext -->
+        <p id="s1Subtext" class="text-[#594a4e] text-[15px] leading-relaxed font-medium px-2 mb-7">
+          Can we talk for a moment? There's something important I want to tell you.
+        </p>
 
-// Confetti
-const canvas=document.getElementById("canvas");
-const ctx=canvas.getContext("2d");
+        <!-- 3D Pill Button -->
+        <button onclick="goToScreen(2)" class="clay-btn-pink px-10 py-3.5 text-[17px] font-bold inline-flex items-center justify-center gap-2 min-w-[190px]">
+          <span>Continue</span>
+          <span class="text-[#5c2c36] text-base">❤</span>
+        </button>
 
-function resize(){
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-}
-resize();
-window.onresize=resize;
+      </div>
+    </section>
 
-let confetti=[];
+    <!-- ==========================================
+         SCREEN 2: "I know I hurt you..."
+         ========================================== -->
+    <section id="screen-2" class="screen-view">
+      <div class="clay-card p-6 sm:p-7 text-center">
+        
+        <!-- 3D Inset Window with Apologetic Cat -->
+        <div class="clay-window-frame mb-6">
+          <div class="clay-stage-purple h-48 flex items-center justify-center relative">
+            
+            <!-- Left Floating Purple Heart -->
+            <svg class="w-9 h-9 absolute top-6 left-7 anim-float clay-svg-shadow" viewBox="0 0 60 60">
+              <path d="M30 50 C30 50 8 36 8 20 C8 11 15 6 22 6 C26 6 29 9 30 12 C31 9 34 6 38 6 C45 6 52 11 52 20 C52 36 30 50 30 50 Z" fill="#b79ced" />
+            </svg>
 
-function celebrate(){
+            <!-- Right Floating Purple Heart -->
+            <svg class="w-9 h-9 absolute top-6 right-7 anim-float-rev clay-svg-shadow" viewBox="0 0 60 60">
+              <path d="M30 50 C30 50 8 36 8 20 C8 11 15 6 22 6 C26 6 29 9 30 12 C31 9 34 6 38 6 C45 6 52 11 52 20 C52 36 30 50 30 50 Z" fill="#b79ced" />
+            </svg>
 
-for(let i=0;i<220;i++){
-confetti.push({
-x:Math.random()*canvas.width,
-y:-20,
-r:Math.random()*6+3,
-d:Math.random()*5+2,
-color:["#ff1493","#ff69b4","#ffffff","#ffd1e8","#ff8ac8"][Math.floor(Math.random()*5)]
-});
-}
+            <!-- Cute Sad/Apologetic White Cat SVG -->
+            <svg class="w-32 h-32 mt-6 anim-breath clay-svg-shadow" viewBox="0 0 140 140">
+              <ellipse cx="70" cy="126" rx="34" ry="6" fill="rgba(120, 100, 160, 0.22)" />
+              <!-- Cat Ears -->
+              <path d="M38 62 L32 34 L58 46 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M38 56 L35 40 L52 47 Z" fill="#f7b2c4"/>
+              <path d="M102 62 L108 34 L82 46 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M102 56 L105 40 L88 47 Z" fill="#f7b2c4"/>
+              <!-- Body -->
+              <path d="M45 96 C42 114 48 124 70 124 C92 124 98 114 95 96 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+              <!-- Head -->
+              <path d="M34 76 C32 50 48 44 70 44 C92 44 108 50 106 76 C108 94 94 104 70 104 C46 104 32 94 34 76 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+              <!-- Little Grey Forehead Stripes -->
+              <path d="M65 46 L65 53 M70 45 L70 54 M75 46 L75 53" stroke="#b5a8b8" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- Sad/Pleading Eyes with Shiny Tears -->
+              <circle cx="53" cy="76" r="4" fill="#4a3535"/>
+              <circle cx="51.5" cy="74.5" r="1.4" fill="#ffffff"/>
+              <circle cx="87" cy="76" r="4" fill="#4a3535"/>
+              <circle cx="85.5" cy="74.5" r="1.4" fill="#ffffff"/>
+              <!-- Little Blue Tear Droplets -->
+              <path d="M48 81 Q46 86 49 88 Q52 86 50 81 Z" fill="#8ecae6"/>
+              <path d="M92 81 Q94 86 91 88 Q88 86 90 81 Z" fill="#8ecae6"/>
+              <!-- Apologetic Eyebrows -->
+              <path d="M46 68 Q52 65 57 69" fill="none" stroke="#5a4343" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M94 68 Q88 65 83 69" fill="none" stroke="#5a4343" stroke-width="2.2" stroke-linecap="round"/>
+              <!-- Rosy Cheeks -->
+              <ellipse cx="44" cy="83" rx="6.5" ry="4" fill="#f794a4" opacity="0.75"/>
+              <ellipse cx="96" cy="83" rx="6.5" ry="4" fill="#f794a4" opacity="0.75"/>
+              <!-- Whiskers -->
+              <path d="M32 77 L23 75 M32 82 L22 83" stroke="#5a4343" stroke-width="2" stroke-linecap="round"/>
+              <path d="M108 77 L117 75 M108 82 L118 83" stroke="#5a4343" stroke-width="2" stroke-linecap="round"/>
+              <!-- Sad Little Kitty Mouth -->
+              <path d="M65 84 Q68 81 70 84 Q72 81 75 84" fill="none" stroke="#5a4343" stroke-width="2.3" stroke-linecap="round"/>
+              <!-- Waving Left Paw -->
+              <g class="anim-paw">
+                <ellipse cx="41" cy="92" rx="6.5" ry="9" transform="rotate(-25 41 92)" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.8"/>
+              </g>
+              <!-- Resting Right Paw -->
+              <ellipse cx="84" cy="104" rx="6.5" ry="5" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.8"/>
+            </svg>
 
-if(navigator.vibrate){
-navigator.vibrate([120,60,120]);
-}
+          </div>
+        </div>
 
-}
+        <!-- Apology Subtext -->
+        <p id="s2Subtext" class="text-[#4e4352] text-[16px] leading-relaxed font-semibold px-3 mb-7">
+          I know I hurt you... and I've been feeling bad about it.
+        </p>
 
-function animate(){
+        <!-- 3D Purple Pill Button -->
+        <button onclick="goToScreen(3)" class="clay-btn-purple px-10 py-3.5 text-[17px] font-bold inline-flex items-center justify-center gap-2 min-w-[175px]">
+          <span>Next</span>
+          <span class="text-lg leading-none">→</span>
+        </button>
 
-ctx.clearRect(0,0,canvas.width,canvas.height);
+      </div>
+    </section>
 
-confetti.forEach((c,index)=>{
+    <!-- ==========================================
+         SCREEN 3: "Little things I want to tell you..."
+         ========================================== -->
+    <section id="screen-3" class="screen-view">
+      <div class="clay-card p-6 sm:p-7 text-center">
+        
+        <!-- Cursive Title -->
+        <h2 class="font-cursive text-[34px] leading-snug text-[#5a2936] mb-1 px-2">
+          Little things I want to tell you...
+        </h2>
+        <p id="s3Hint" class="text-[#8c7a80] text-[14px] font-medium mb-6 transition-colors">
+          Tap each one to unlock (<span id="s3Progress">0</span>/3)
+        </p>
 
-ctx.beginPath();
-ctx.fillStyle=c.color;
-ctx.arc(c.x,c.y,c.r,0,Math.PI*2);
-ctx.fill();
+        <!-- Three Tap-to-Reveal 3D Bars (Original English Notes) -->
+        <div class="space-y-4 mb-7">
+          
+          <!-- Bar 1: Peach -->
+          <div id="reveal-1" onclick="revealBar(1)" class="reveal-track reveal-track-peach flex items-center justify-center px-5">
+            <p id="bar1Text" class="text-[#594338] text-[15px] font-semibold leading-snug text-center">
+              I messed up... and I'm really sorry for that.
+            </p>
+            <div class="reveal-cover cover-peach">
+              <svg class="w-9 h-9 anim-heart" viewBox="0 0 60 60">
+                <path d="M30 50 C30 50 8 35 8 19 C8 10 15 5 22 5 C26 5 29 8 30 12 C31 8 34 5 38 5 C45 5 52 10 52 19 C52 35 30 50 30 50 Z" fill="#d9916ba8" />
+              </svg>
+            </div>
+          </div>
 
-c.y+=c.d;
-c.x+=Math.sin(c.y*0.02);
+          <!-- Bar 2: Pink -->
+          <div id="reveal-2" onclick="revealBar(2)" class="reveal-track reveal-track-pink flex items-center justify-center px-5">
+            <p id="bar2Text" class="text-[#5e3744] text-[15px] font-semibold leading-snug text-center">
+              I promise I'll be better for you.
+            </p>
+            <div class="reveal-cover cover-pink">
+              <svg class="w-9 h-9 anim-heart" viewBox="0 0 60 60">
+                <path d="M30 50 C30 50 8 35 8 19 C8 10 15 5 22 5 C26 5 29 8 30 12 C31 8 34 5 38 5 C45 5 52 10 52 19 C52 35 30 50 30 50 Z" fill="#cf7692b5" />
+              </svg>
+            </div>
+          </div>
 
-if(c.y>canvas.height+20){
-confetti.splice(index,1);
-}
+          <!-- Bar 3: Lavender -->
+          <div id="reveal-3" onclick="revealBar(3)" class="reveal-track reveal-track-purple flex items-center justify-center px-5">
+            <p id="bar3Text" class="text-[#4a3963] text-[15px] font-semibold leading-snug text-center">
+              Please forgive me... You mean so much to me.
+            </p>
+            <div class="reveal-cover cover-purple">
+              <svg class="w-9 h-9 anim-heart" viewBox="0 0 60 60">
+                <path d="M30 50 C30 50 8 35 8 19 C8 10 15 5 22 5 C26 5 29 8 30 12 C31 8 34 5 38 5 C45 5 52 10 52 19 C52 35 30 50 30 50 Z" fill="#9274c4b5" />
+              </svg>
+            </div>
+          </div>
 
-});
+        </div>
 
-requestAnimationFrame(animate);
-}
-animate();
-</script>
+        <!-- Bottom Button (Locked until all 3 bars are tapped) -->
+        <button id="s3NextBtn" onclick="tryProceedFromScreen3()" class="clay-btn-pink opacity-60 px-9 py-3.5 text-[16px] font-bold inline-flex items-center justify-center gap-2 min-w-[195px]">
+          <span>My message</span>
+          <span class="text-lg leading-none">→</span>
+        </button>
 
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SCREEN 4: "From my heart..." + Expanding Letter
+         ========================================== -->
+    <section id="screen-4" class="screen-view">
+      <div class="clay-card p-6 sm:p-7 text-center relative overflow-hidden min-h-[465px] flex flex-col justify-between">
+        
+        <!-- Top Header & Two Side-by-Side Cat Frames -->
+        <div id="s4TopContent" class="transition-all duration-500">
+          <h2 class="font-cursive text-[36px] text-[#5e2734] mb-4">
+            From my heart...
+          </h2>
+
+          <!-- Two Side-by-Side 3D Windows with Cats Holding Hearts -->
+          <div class="grid grid-cols-2 gap-3.5 mb-5">
+            
+            <!-- Left Cat Box -->
+            <div class="clay-window-frame !p-2.5 !rounded-[26px]">
+              <div class="clay-stage-pink h-32 !rounded-[18px] flex items-center justify-center">
+                <svg class="w-24 h-24 mt-2 anim-breath clay-svg-shadow" viewBox="0 0 120 120">
+                  <ellipse cx="60" cy="108" rx="28" ry="5" fill="rgba(180,110,125,0.2)"/>
+                  <path d="M32 52 L28 28 L50 38 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M33 47 L30 33 L45 39 Z" fill="#f7b2c4"/>
+                  <path d="M88 52 L92 28 L70 38 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M87 47 L90 33 L75 39 Z" fill="#f7b2c4"/>
+                  <path d="M36 80 C32 98 40 106 60 106 C80 106 88 98 84 80 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3"/>
+                  <path d="M28 64 C26 42 42 36 60 36 C78 36 94 42 92 64 C94 80 80 88 60 88 C40 88 26 80 28 64 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3"/>
+                  <path d="M56 38 L56 44 M60 37 L60 45 M64 38 L64 44" stroke="#b5a8b8" stroke-width="2.2" stroke-linecap="round"/>
+                  <circle cx="46" cy="64" r="3.2" fill="#4a3535"/>
+                  <circle cx="74" cy="64" r="3.2" fill="#4a3535"/>
+                  <ellipse cx="38" cy="70" rx="5.5" ry="3.2" fill="#f794a4" opacity="0.75"/>
+                  <ellipse cx="82" cy="70" rx="5.5" ry="3.2" fill="#f794a4" opacity="0.75"/>
+                  <path d="M56 70 Q60 67 64 70" fill="none" stroke="#5a4343" stroke-width="2" stroke-linecap="round"/>
+                  <g class="anim-heart">
+                    <path d="M60 102 C60 102 40 90 40 77 C40 70 46 66 52 66 C56 66 59 69 60 72 C61 69 64 66 68 66 C74 66 80 70 80 77 C80 90 60 102 60 102 Z" fill="url(#clayHeartRed3D)" stroke="#5a4343" stroke-width="2.5"/>
+                  </g>
+                  <ellipse cx="43" cy="84" rx="5.5" ry="4" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.5"/>
+                  <ellipse cx="77" cy="84" rx="5.5" ry="4" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.5"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right Cat Box -->
+            <div class="clay-window-frame !p-2.5 !rounded-[26px]">
+              <div class="clay-stage-purple h-32 !rounded-[18px] flex items-center justify-center">
+                <svg class="w-24 h-24 mt-2 anim-breath clay-svg-shadow" style="animation-delay: 0.4s" viewBox="0 0 120 120">
+                  <ellipse cx="60" cy="108" rx="28" ry="5" fill="rgba(120,100,160,0.2)"/>
+                  <path d="M32 52 L28 28 L50 38 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M33 47 L30 33 L45 39 Z" fill="#f7b2c4"/>
+                  <path d="M88 52 L92 28 L70 38 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M87 47 L90 33 L75 39 Z" fill="#f7b2c4"/>
+                  <path d="M36 80 C32 98 40 106 60 106 C80 106 88 98 84 80 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3"/>
+                  <path d="M28 64 C26 42 42 36 60 36 C78 36 94 42 92 64 C94 80 80 88 60 88 C40 88 26 80 28 64 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3"/>
+                  <path d="M56 38 L56 44 M60 37 L60 45 M64 38 L64 44" stroke="#b5a8b8" stroke-width="2.2" stroke-linecap="round"/>
+                  <circle cx="46" cy="64" r="3.2" fill="#4a3535"/>
+                  <circle cx="74" cy="64" r="3.2" fill="#4a3535"/>
+                  <ellipse cx="38" cy="70" rx="5.5" ry="3.2" fill="#f794a4" opacity="0.75"/>
+                  <ellipse cx="82" cy="70" rx="5.5" ry="3.2" fill="#f794a4" opacity="0.75"/>
+                  <path d="M56 70 Q60 67 64 70" fill="none" stroke="#5a4343" stroke-width="2" stroke-linecap="round"/>
+                  <g class="anim-heart" style="animation-delay: 0.3s">
+                    <path d="M60 102 C60 102 40 90 40 77 C40 70 46 66 52 66 C56 66 59 69 60 72 C61 69 64 66 68 66 C74 66 80 70 80 77 C80 90 60 102 60 102 Z" fill="url(#clayHeartRed3D)" stroke="#5a4343" stroke-width="2.5"/>
+                  </g>
+                  <ellipse cx="43" cy="84" rx="5.5" ry="4" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.5"/>
+                  <ellipse cx="77" cy="84" rx="5.5" ry="4" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.5"/>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Recessed Letter Box (Expands upward when tapped) -->
+        <div id="letterWrapper" onclick="toggleLetter()" class="letter-drawer clay-window-frame !p-3 cursor-pointer relative z-20">
+          
+          <!-- Prompt shown only when collapsed -->
+          <div id="tapPrompt" class="text-[#7c6a70] text-[13px] font-semibold mb-2 flex items-center justify-center gap-1.5 transition-opacity duration-300">
+            <span>↓</span>
+            <span>Tap to open letter</span>
+            <span>↓</span>
+          </div>
+
+          <!-- Floral Apology Letter Card -->
+          <div id="letterInnerCard" class="bg-[#fffDFB] rounded-[20px] p-4 relative overflow-hidden shadow-inner border border-[#f3e5e8] transition-all duration-500 h-[120px] flex flex-col items-center justify-center">
+            
+            <!-- Top-Left Watercolor Rose & Leaves Corner SVG -->
+            <svg class="w-24 h-24 absolute -top-2 -left-2 pointer-events-none opacity-90" viewBox="0 0 100 100">
+              <path d="M10 45 Q25 35 45 45 Q25 55 10 45 Z" fill="#a3b899" transform="rotate(-25 25 45)"/>
+              <path d="M35 15 Q50 5 65 20 Q50 30 35 15 Z" fill="#8fa882" transform="rotate(15 50 18)"/>
+              <path d="M8 65 Q20 58 32 68 Q18 75 8 65 Z" fill="#b7c9ad"/>
+              <circle cx="26" cy="26" r="18" fill="#f9d5dc"/>
+              <circle cx="24" cy="24" r="13" fill="#f4b6c2"/>
+              <path d="M18 22 Q24 14 31 22 Q26 30 18 22 Z" fill="#ec95a7"/>
+              <circle cx="48" cy="14" r="8" fill="#fae0e5"/>
+              <circle cx="14" cy="48" r="9" fill="#fae0e5"/>
+            </svg>
+
+            <!-- Top-Right Watercolor Rose & Leaves Corner SVG -->
+            <svg class="w-24 h-24 absolute -top-2 -right-2 pointer-events-none opacity-90 transform scale-x-[-1]" viewBox="0 0 100 100">
+              <path d="M10 45 Q25 35 45 45 Q25 55 10 45 Z" fill="#a3b899" transform="rotate(-25 25 45)"/>
+              <path d="M35 15 Q50 5 65 20 Q50 30 35 15 Z" fill="#8fa882" transform="rotate(15 50 18)"/>
+              <circle cx="26" cy="26" r="18" fill="#f9d5dc"/>
+              <circle cx="24" cy="24" r="13" fill="#f4b6c2"/>
+              <path d="M18 22 Q24 14 31 22 Q26 30 18 22 Z" fill="#ec95a7"/>
+              <circle cx="48" cy="14" r="8" fill="#fae0e5"/>
+            </svg>
+
+            <!-- Bottom-Left Floral Accent -->
+            <svg class="w-20 h-20 absolute -bottom-2 -left-2 pointer-events-none opacity-85 transform scale-y-[-1]" viewBox="0 0 100 100">
+              <path d="M12 40 Q28 30 45 40 Q28 50 12 40 Z" fill="#9cb392"/>
+              <circle cx="22" cy="22" r="15" fill="#f9d5dc"/>
+              <circle cx="20" cy="20" r="10" fill="#f2aebc"/>
+            </svg>
+
+            <!-- Bottom-Right Floral Accent -->
+            <svg class="w-20 h-20 absolute -bottom-2 -right-2 pointer-events-none opacity-85 transform scale-[-1]" viewBox="0 0 100 100">
+              <path d="M12 40 Q28 30 45 40 Q28 50 12 40 Z" fill="#9cb392"/>
+              <circle cx="22" cy="22" r="15" fill="#f9d5dc"/>
+              <circle cx="20" cy="20" r="10" fill="#f2aebc"/>
+            </svg>
+
+            <!-- "I'm Sorry" Heading -->
+            <h3 id="letterHeading" class="font-cursive text-[40px] text-[#6d2e3b] relative z-10 transition-all duration-500">
+              I'm Sorry
+            </h3>
+
+            <!-- Full Apology Paragraph (Aritro's Note in Hindi) + Button to Screen 5 -->
+            <div id="letterBodyContainer" class="hidden opacity-0 transition-opacity duration-500 relative z-10 mt-1 max-h-[260px] overflow-y-auto letter-scroll px-2">
+              <p id="letterBodyText" class="text-[#544246] text-[13px] leading-[1.5] font-medium text-center">
+                Mam I am so, so sorry. Sach kahun toh mujhe khud samajh nahi raha ki maine aisi be-matlab baat kaise bol di. Diwali wale din tumhare ghar pe jo hua tha, mujhe acche se yaad hai, aur mera bilkul bhi yeh matlab nahi tha ki main kisi bhi tarah insensitive hounga ya tumhari feelings ko hurt karunga.<br><br>
+                Bas galti se dimag se nikal gaya aur maine aisi ajeeb si baat bol di, jo mujhe bilkul nahi bolni chahiye thi. Main sach mein bohot ashamed hoon is baat ke liye. Please mujhe maaf kar do, main aage se bohot dhyan rakhunga.<br><br>
+                <span class="font-bold text-[#6d2e3b]">- Aritro</span>
+              </p>
+
+              <!-- CTA Button to Screen 5 Finale -->
+              <div class="mt-3 mb-1">
+                <button onclick="event.stopPropagation(); goToScreen(5);" class="clay-btn-pink px-6 py-2 text-[14px] font-bold inline-flex items-center justify-center gap-1.5 shadow-md">
+                  <span>One last question...</span>
+                  <span>❤️</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SCREEN 5: INTERACTIVE "FORGIVE ME?" FINALE
+         ========================================== -->
+    <section id="screen-5" class="screen-view">
+      <div id="s5Card" class="clay-card p-6 sm:p-7 text-center relative overflow-hidden min-h-[450px] flex flex-col justify-between">
+        
+        <!-- STATE A: Asking "Do you forgive me?" -->
+        <div id="forgiveAskState" class="flex flex-col h-full justify-between">
+          
+          <!-- 3D Window with Pleading Bunny -->
+          <div class="clay-window-frame mb-5">
+            <div class="clay-stage-peach h-44 flex items-center justify-center relative">
+              <span class="absolute top-5 left-7 text-xl anim-float">✨</span>
+              <span class="absolute top-6 right-7 text-xl anim-float-rev">🥺</span>
+
+              <!-- Pleading Bunny SVG -->
+              <svg class="w-32 h-32 mt-4 anim-breath clay-svg-shadow" viewBox="0 0 140 140">
+                <ellipse cx="70" cy="126" rx="34" ry="6" fill="rgba(180, 110, 125, 0.2)" />
+                <!-- Ears drooped low -->
+                <path d="M46 56 C24 44 18 64 28 74 C34 80 44 70 48 64 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M94 56 C116 44 122 64 112 74 C106 80 96 70 92 64 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3" stroke-linejoin="round"/>
+                <!-- Body & Head -->
+                <path d="M46 95 C42 112 48 124 70 124 C92 124 98 112 94 95 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3"/>
+                <path d="M36 78 C32 52 50 44 70 44 C90 44 108 52 104 78 C108 92 95 104 70 104 C45 104 32 92 36 78 Z" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="3"/>
+                <!-- Big Puppy Eyes with Sparkles -->
+                <circle cx="54" cy="76" r="5" fill="#4a3535"/>
+                <circle cx="52" cy="74" r="2" fill="#ffffff"/>
+                <circle cx="56" cy="78" r="1" fill="#ffffff"/>
+                <circle cx="86" cy="76" r="5" fill="#4a3535"/>
+                <circle cx="84" cy="74" r="2" fill="#ffffff"/>
+                <circle cx="88" cy="78" r="1" fill="#ffffff"/>
+                <!-- Blushing Cheeks -->
+                <ellipse cx="44" cy="84" rx="7" ry="4.5" fill="#f794a4" opacity="0.8"/>
+                <ellipse cx="96" cy="84" rx="7" ry="4.5" fill="#f794a4" opacity="0.8"/>
+                <!-- Pleading Eyebrows & Mouth -->
+                <path d="M47 67 Q54 63 59 68" fill="none" stroke="#6d4c41" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M93 67 Q86 63 81 68" fill="none" stroke="#6d4c41" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M66 85 Q70 81 74 85" fill="none" stroke="#6d4c41" stroke-width="2.3" stroke-linecap="round"/>
+                <!-- Paws together pleading -->
+                <ellipse cx="63" cy="102" rx="6.5" ry="4.5" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="2.8"/>
+                <ellipse cx="77" cy="102" rx="6.5" ry="4.5" fill="url(#clayWhite3D)" stroke="#6d4c41" stroke-width="2.8"/>
+              </svg>
+            </div>
+          </div>
+
+          <h2 class="font-cursive text-[38px] leading-tight text-[#6d2e3b] mb-1">
+            Will you forgive me?
+          </h2>
+          <p id="pleaSubtext" class="text-[#7a646a] text-[14.5px] font-medium mb-6 min-h-[22px] transition-all">
+            Please mam, maaf kar do! 🙏
+          </p>
+
+          <!-- Interactive Button Playground Area -->
+          <div id="buttonPlayground" class="relative min-h-[115px] flex flex-col items-center justify-center gap-3">
+            
+            <!-- YES Button (Grows each time "No" runs away) -->
+            <button id="yesBtn" onclick="acceptApology()" class="clay-btn-pink px-8 py-3.5 text-[16px] font-bold inline-flex items-center justify-center gap-2 z-20 shadow-lg">
+              <span>Yes, I forgive you!</span>
+              <span>❤️</span>
+            </button>
+
+            <!-- Runaway NO Button -->
+            <button id="noBtn" 
+                    onmouseenter="dodgeNoButton(event)" 
+                    ontouchstart="dodgeNoButton(event)" 
+                    onclick="dodgeNoButton(event)"
+                    class="clay-btn-gray px-6 py-2 text-[14px] font-bold inline-flex items-center justify-center gap-1 z-30">
+              <span id="noBtnText">No 😤</span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- STATE B: Celebration ("Yay! Thank You!") -->
+        <div id="forgiveSuccessState" class="hidden flex-col items-center justify-center py-2">
+          
+          <div class="clay-window-frame w-full mb-5">
+            <div class="clay-stage-pink h-48 flex items-center justify-center relative">
+              <!-- Floating Hearts Around Happy Cat -->
+              <svg class="w-10 h-10 absolute top-4 left-6 anim-heart clay-svg-shadow" viewBox="0 0 60 60">
+                <path d="M30 50 C30 50 8 36 8 20 C8 11 15 6 22 6 C26 6 29 9 30 12 C31 9 34 6 38 6 C45 6 52 11 52 20 C52 36 30 50 30 50 Z" fill="url(#clayHeartRed3D)" />
+              </svg>
+              <svg class="w-8 h-8 absolute top-5 right-6 anim-heart clay-svg-shadow" style="animation-delay:0.3s" viewBox="0 0 60 60">
+                <path d="M30 50 C30 50 8 36 8 20 C8 11 15 6 22 6 C26 6 29 9 30 12 C31 9 34 6 38 6 C45 6 52 11 52 20 C52 36 30 50 30 50 Z" fill="url(#clayHeartPink3D)" />
+              </svg>
+              <span class="absolute bottom-3 left-6 text-xl anim-float">🎉</span>
+              <span class="absolute bottom-3 right-6 text-xl anim-float-rev">💖</span>
+
+              <!-- Happy Dancing Cat SVG -->
+              <svg class="w-34 h-34 mt-3 anim-dance clay-svg-shadow" viewBox="0 0 140 140">
+                <ellipse cx="70" cy="128" rx="30" ry="5" fill="rgba(180, 110, 125, 0.22)" />
+                <!-- Ears -->
+                <path d="M38 62 L32 34 L58 46 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M38 56 L35 40 L52 47 Z" fill="#f7b2c4"/>
+                <path d="M102 62 L108 34 L82 46 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M102 56 L105 40 L88 47 Z" fill="#f7b2c4"/>
+                <!-- Body -->
+                <path d="M45 96 C42 114 48 124 70 124 C92 124 98 114 95 96 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3"/>
+                <!-- Head -->
+                <path d="M34 76 C32 50 48 44 70 44 C92 44 108 50 106 76 C108 94 94 104 70 104 C46 104 32 94 34 76 Z" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="3"/>
+                <!-- Happy Arched Eyes (^ ^) -->
+                <path d="M47 75 Q53 67 59 75" fill="none" stroke="#5a4343" stroke-width="3" stroke-linecap="round"/>
+                <path d="M81 75 Q87 67 93 75" fill="none" stroke="#5a4343" stroke-width="3" stroke-linecap="round"/>
+                <!-- Big Rosy Cheeks -->
+                <ellipse cx="43" cy="82" rx="7.5" ry="4.5" fill="#f794a4" opacity="0.85"/>
+                <ellipse cx="97" cy="82" rx="7.5" ry="4.5" fill="#f794a4" opacity="0.85"/>
+                <!-- Happy Open Smile -->
+                <path d="M63 81 Q70 91 77 81 Z" fill="#f28482" stroke="#5a4343" stroke-width="2.2" stroke-linejoin="round"/>
+                <!-- Both Paws Raised Up Cheering! -->
+                <ellipse cx="36" cy="84" rx="6" ry="9" transform="rotate(-35 36 84)" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.8"/>
+                <ellipse cx="104" cy="84" rx="6" ry="9" transform="rotate(35 104 84)" fill="url(#clayWhite3D)" stroke="#5a4343" stroke-width="2.8"/>
+                <!-- Heart on Belly -->
+                <path d="M70 116 C70 116 58 108 58 100 C58 95 62 92 66 92 C68 92 69 94 70 96 C71 94 72 92 74 92 C78 92 82 95 82 100 C82 108 70 116 70 116 Z" fill="url(#clayHeartRed3D)"/>
+              </svg>
+            </div>
+          </div>
+
+          <h2 class="font-cursive text-[42px] leading-tight text-[#6d2e3b] mb-2">
+            Thank you mam! ❤️
+          </h2>
+          <p class="text-[#594a4e] text-[15px] leading-relaxed font-semibold px-2 mb-6">
+            Promise aage se bohot dhyan rakhunga! ✨
+          </p>
+
+          <div class="flex items-center gap-3">
+            <button onclick="launchHeartConfetti(); playCelebrationTune();" class="clay-btn-pink px-6 py-3 text-[15px] font-bold inline-flex items-center gap-1.5">
+              <span>Celebrate!</span>
+              <span>🎉</span>
+            </button>
+            <button onclick="resetAllScreens()" class="clay-btn-purple px-5 py-3 text-[14px] font-bold">
+              Replay ↺
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Subtle Step Dots at Bottom (Guarded by Progression) -->
+    <div class="flex items-center justify-center gap-2 mt-5">
+      <button onclick="tryNavigateDot(1)" id="dot-1" class="w-2.5 h-2.5 rounded-full bg-[#d48b9c] transition-all duration-300 scale-125" aria-label="Screen 1"></button>
+      <button onclick="tryNavigateDot(2)" id="dot-2" class="w-2.5 h-2.5 rounded-full bg-[#dcc5ce] transition-all duration-300" aria-label="Screen 2"></button>
+      <button onclick="tryNavigateDot(3)" id="dot-3" class="w-2.5 h-2.5 rounded-full bg-[#dcc5ce] transition-all duration-300" aria-label="Screen 3"></button>
+      <button onclick="tryNavigateDot(4)" id="dot-4" class="w-2.5 h-2.5 rounded-full bg-[#dcc5ce] transition-all duration-300" aria-label="Screen 4"></button>
+      <button onclick="tryNavigateDot(5)" id="dot-5" class="w-2.5 h-2.5 rounded-full bg-[#dcc5ce] transition-all duration-300" aria-label="Screen 5"></button>
+    </div>
+
+  </main>
+
+  <script>
+    // State Management with Navigation Lock
+    let currentScreen = 1;
+    let maxUnlockedScreen = 1;
+    let isLetterExpanded = false;
+    let soundEnabled = true;
+    let synth = null;
+    let noDodgeCount = 0;
+    const openedBars = new Set();
+
+    const funnyNoMessages = [
+      "Soch lijiye mam! 🥺",
+      "Ek aur baar try karein? 😭",
+      "Aise mat kijiye na! 👉👈",
+      "Maaf kar dijiye na please! 💔",
+      "Main aage se dhyan rakhunga! 🍟",
+      "Bohot ashamed hoon main! 😜",
+      "Sirf YES dabaiye na! ❤️"
+    ];
+
+    // Initialize gentle sound synth using Tone.js
+    function initAudio() {
+      if (!synth && window.Tone) {
+        synth = new Tone.PolySynth(Tone.Synth, {
+          oscillator: { type: "sine" },
+          envelope: { attack: 0.02, decay: 0.2, sustain: 0.05, release: 0.6 }
+        }).toDestination();
+        synth.volume.value = -12;
+      }
+    }
+
+    function playChime(notes = ["C5", "E5"]) {
+      if (!soundEnabled) return;
+      try {
+        initAudio();
+        if (Tone.context.state !== "running") {
+          Tone.context.resume();
+        }
+        synth.triggerAttackRelease(notes, "16n");
+      } catch (e) {}
+    }
+
+    function playCelebrationTune() {
+      if (!soundEnabled) return;
+      try {
+        initAudio();
+        if (Tone.context.state !== "running") {
+          Tone.context.resume();
+        }
+        const now = Tone.now();
+        synth.triggerAttackRelease(["C5", "E5"], "16n", now);
+        synth.triggerAttackRelease(["E5", "G5"], "16n", now + 0.12);
+        synth.triggerAttackRelease(["G5", "C6"], "16n", now + 0.24);
+        synth.triggerAttackRelease(["C5", "E5", "G5", "C6"], "8n", now + 0.38);
+      } catch (e) {}
+    }
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      document.getElementById("soundIcon").textContent = soundEnabled ? "🔊" : "🔇";
+      if (soundEnabled) playChime(["E5", "G5"]);
+    }
+
+    // Guarded Navigation for Bottom Dots (Navigation Lock)
+    function tryNavigateDot(targetScreen) {
+      if (targetScreen > maxUnlockedScreen) {
+        // Shake current card gently if locked
+        const activeCard = document.querySelector(`#screen-${currentScreen} .clay-card`);
+        if (activeCard) {
+          activeCard.classList.remove("anim-shake");
+          void activeCard.offsetWidth;
+          activeCard.classList.add("anim-shake");
+        }
+        playChime(["A4"]);
+        return;
+      }
+      goToScreen(targetScreen);
+    }
+
+    // Navigate between the 5 screens with strict progression tracking
+    function goToScreen(screenNum) {
+      playChime(["D5", "F#5"]);
+
+      if (screenNum > maxUnlockedScreen) {
+        maxUnlockedScreen = screenNum;
+      }
+
+      if (currentScreen === 4 && isLetterExpanded && screenNum !== 4) {
+        toggleLetter(false);
+      }
+
+      for (let i = 1; i <= 5; i++) {
+        const el = document.getElementById(`screen-${i}`);
+        const dot = document.getElementById(`dot-${i}`);
+        el.classList.remove("active");
+        dot.classList.remove("bg-[#d48b9c]", "scale-125");
+        dot.classList.add("bg-[#dcc5ce]");
+      }
+
+      const target = document.getElementById(`screen-${screenNum}`);
+      const targetDot = document.getElementById(`dot-${screenNum}`);
+      target.classList.add("active");
+      targetDot.classList.remove("bg-[#dcc5ce]");
+      targetDot.classList.add("bg-[#d48b9c]", "scale-125");
+
+      currentScreen = screenNum;
+    }
+
+    // Screen 3: Tap-to-reveal horizontal bars & track completion
+    function revealBar(index) {
+      const bar = document.getElementById(`reveal-${index}`);
+      if (!bar.classList.contains("opened")) {
+        bar.classList.add("opened");
+        openedBars.add(index);
+        const chordMap = {
+          1: ["C5", "E5"],
+          2: ["D5", "F5"],
+          3: ["E5", "G5", "C6"]
+        };
+        playChime(chordMap[index]);
+      } else {
+        bar.classList.remove("opened");
+        openedBars.delete(index);
+        playChime(["C5"]);
+      }
+
+      // Update unlock counter
+      document.getElementById("s3Progress").textContent = openedBars.size;
+      const nextBtn = document.getElementById("s3NextBtn");
+      const hint = document.getElementById("s3Hint");
+
+      if (openedBars.size === 3) {
+        nextBtn.classList.remove("opacity-60");
+        hint.textContent = "All unlocked! ❤️";
+        hint.classList.replace("text-[#8c7a80]", "text-[#b84a62]");
+      } else {
+        nextBtn.classList.add("opacity-60");
+        hint.innerHTML = `Tap each one to unlock (<span id="s3Progress">${openedBars.size}</span>/3)`;
+        hint.classList.replace("text-[#b84a62]", "text-[#8c7a80]");
+      }
+    }
+
+    function tryProceedFromScreen3() {
+      if (openedBars.size < 3) {
+        const hint = document.getElementById("s3Hint");
+        hint.classList.remove("anim-shake");
+        void hint.offsetWidth;
+        hint.classList.add("anim-shake");
+        playChime(["A4"]);
+        return;
+      }
+      goToScreen(4);
+    }
+
+    // Screen 4: Expand / Collapse the Floral "I'm Sorry" Letter upward
+    function toggleLetter(forceState) {
+      const topContent = document.getElementById("s4TopContent");
+      const tapPrompt = document.getElementById("tapPrompt");
+      const innerCard = document.getElementById("letterInnerCard");
+      const bodyContainer = document.getElementById("letterBodyContainer");
+      const heading = document.getElementById("letterHeading");
+
+      isLetterExpanded = typeof forceState === "boolean" ? forceState : !isLetterExpanded;
+
+      if (isLetterExpanded) {
+        playChime(["F5", "A5", "C6"]);
+        topContent.style.maxHeight = "0px";
+        topContent.style.opacity = "0";
+        topContent.style.marginBottom = "0px";
+        topContent.style.overflow = "hidden";
+
+        tapPrompt.style.opacity = "0";
+        tapPrompt.style.height = "0px";
+        tapPrompt.style.marginBottom = "0px";
+
+        innerCard.classList.remove("h-[120px]", "justify-center");
+        innerCard.classList.add("h-[395px]", "justify-start", "pt-4");
+
+        heading.classList.replace("text-[40px]", "text-[32px]");
+        heading.classList.add("mb-1");
+
+        bodyContainer.classList.remove("hidden");
+        setTimeout(() => {
+          bodyContainer.classList.remove("opacity-0");
+          bodyContainer.classList.add("opacity-100");
+        }, 80);
+      } else {
+        playChime(["E5", "C5"]);
+        topContent.style.maxHeight = "300px";
+        topContent.style.opacity = "1";
+        topContent.style.marginBottom = "";
+
+        tapPrompt.style.opacity = "1";
+        tapPrompt.style.height = "auto";
+        tapPrompt.style.marginBottom = "8px";
+
+        innerCard.classList.remove("h-[395px]", "justify-start", "pt-4");
+        innerCard.classList.add("h-[120px]", "justify-center");
+
+        heading.classList.replace("text-[32px]", "text-[40px]");
+        heading.classList.remove("mb-1");
+
+        bodyContainer.classList.remove("opacity-100");
+        bodyContainer.classList.add("opacity-0");
+        setTimeout(() => {
+          bodyContainer.classList.add("hidden");
+        }, 300);
+      }
+    }
+
+    // Screen 5: Runaway "No" Button Logic (Constrained safely within card bounds)
+    function dodgeNoButton(e) {
+      if (e) e.preventDefault();
+      playChime(["A4"]);
+
+      const noBtn = document.getElementById("noBtn");
+      const noBtnText = document.getElementById("noBtnText");
+      const yesBtn = document.getElementById("yesBtn");
+      const pleaSubtext = document.getElementById("pleaSubtext");
+
+      const msg = funnyNoMessages[noDodgeCount % funnyNoMessages.length];
+      noBtnText.textContent = msg;
+      pleaSubtext.textContent = "Yeh button kaam nahi kar raha mam, pink wala dabaiye! 🤭";
+      noDodgeCount++;
+
+      // Safe coordinates that stay inside the mobile card
+      const randomX = Math.floor(Math.random() * 130) - 65;
+      const randomY = Math.floor(Math.random() * 76) - 38;
+      const randomRot = Math.floor(Math.random() * 20) - 10;
+
+      noBtn.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRot}deg) scale(0.92)`;
+
+      // Grow the "Yes" button progressively
+      const yesScale = Math.min(1 + noDodgeCount * 0.08, 1.36);
+      yesBtn.style.transform = `scale(${yesScale})`;
+    }
+
+    // Screen 5: Clicking "Yes, I forgive you!"
+    function acceptApology() {
+      playCelebrationTune();
+      document.getElementById("forgiveAskState").classList.add("hidden");
+      const successState = document.getElementById("forgiveSuccessState");
+      successState.classList.remove("hidden");
+      successState.classList.add("flex");
+      launchHeartConfetti();
+    }
+
+    // Confetti Shower Generator
+    function launchHeartConfetti() {
+      const container = document.getElementById("confettiContainer");
+      const symbols = ["❤️", "💖", "🌸", "✨", "💕", "🥰"];
+
+      for (let i = 0; i < 36; i++) {
+        const piece = document.createElement("div");
+        piece.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        piece.style.position = "absolute";
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.top = "-30px";
+        piece.style.fontSize = Math.floor(Math.random() * 14 + 16) + "px";
+        const duration = (Math.random() * 2 + 2.2).toFixed(2);
+        const delay = (Math.random() * 0.8).toFixed(2);
+        piece.style.animation = `confettiFall ${duration}s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}s forwards`;
+
+        container.appendChild(piece);
+        setTimeout(() => piece.remove(), (parseFloat(duration) + parseFloat(delay)) * 1000 + 200);
+      }
+    }
+
+    function resetAllScreens() {
+      openedBars.clear();
+      for (let i = 1; i <= 3; i++) {
+        document.getElementById(`reveal-${i}`).classList.remove("opened");
+      }
+      document.getElementById("s3NextBtn").classList.add("opacity-60");
+      const hint = document.getElementById("s3Hint");
+      hint.innerHTML = `Tap each one to unlock (<span id="s3Progress">0</span>/3)`;
+      hint.classList.replace("text-[#b84a62]", "text-[#8c7a80]");
+
+      if (isLetterExpanded) {
+        toggleLetter(false);
+      }
+      maxUnlockedScreen = 1;
+
+      // Reset Screen 5 state
+      noDodgeCount = 0;
+      document.getElementById("noBtn").style.transform = "none";
+      document.getElementById("noBtnText").textContent = "No 😤";
+      document.getElementById("yesBtn").style.transform = "none";
+      document.getElementById("pleaSubtext").textContent = "Please mam, maaf kar do! 🙏";
+      document.getElementById("forgiveAskState").classList.remove("hidden");
+      const successState = document.getElementById("forgiveSuccessState");
+      successState.classList.add("hidden");
+      successState.classList.remove("flex");
+
+      goToScreen(1);
+    }
+  </script>
 </body>
 </html>
